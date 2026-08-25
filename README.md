@@ -71,39 +71,6 @@ ChatNova uses SQLite to persist:
 | JavaScript       | Chat functionality       |
 | OpenRouter API   | AI model integration     |
 
----
-
-## 📁 Project Structure
-ChatNova/
-│
-├── app.py
-├── models.py
-├── database.py
-├── chatbot_engine.py
-├── requirements.txt
-├── .gitignore
-├── README.md
-│
-├── instance/
-│   └── chatnova.db
-│
-├── templates/
-│   ├── base.html
-│   ├── index.html
-│   ├── login.html
-│   └── register.html
-│
-├── static/
-│   ├── css/
-│   │   └── style.css
-│   │
-│   └── js/
-│       └── chatbot.js
-│
-└── venv/
-
-
-> `venv/`, `.env`, and local database files should not be committed to GitHub.
 
 ---
 
@@ -112,7 +79,7 @@ ChatNova/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ChatNova.git
+git clone https://github.com/erandes73-ai/ChatNova.git
 ```
 
 ### 2. Enter the project directory
@@ -149,7 +116,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🔑 Environment Variables
+🔑 Environment Variables
 
 ChatNova uses environment variables for sensitive credentials.
 
@@ -181,7 +148,7 @@ instance/
 
 ---
 
-## 🚀 Running ChatNova
+🚀 Running ChatNova
 
 Activate your virtual environment and run:
 
