@@ -1,0 +1,29 @@
+What is AI? | AI stands for Artificial Intelligence, which enables machines to perform tasks that normally require human intelligence.
+
+Who developed Python? | Python was developed by Guido van Rossum and was first released in 1991.
+
+What is NLP? | NLP stands for Natural Language Processing. It is a field of AI that focuses on interaction between computers and human language.
+
+What is machine learning? | Machine learning is a branch of AI that allows computers to learn patterns from data and make predictions or decisions without being explicitly programmed for every task.
+
+What is deep learning? | Deep learning is a subset of machine learning that uses artificial neural networks with multiple layers to learn complex patterns from large amounts of data.
+
+What is Python? | Python is a high-level, interpreted programming language known for its simple syntax and wide range of libraries.
+
+What is Flask? | Flask is a lightweight Python web framework used to build web applications and APIs.
+
+What is SQL? | SQL stands for Structured Query Language and is used to store, retrieve, modify, and manage data in relational databases.
+
+What is a database? | A database is an organized collection of data that allows information to be stored, managed, and retrieved efficiently.
+
+What is HTML? | HTML stands for HyperText Markup Language and is used to structure content on web pages.
+
+What is CSS? | CSS stands for Cascading Style Sheets and is used to control the appearance and layout of web pages.
+
+What is JavaScript? | JavaScript is a programming language commonly used to make web pages interactive and dynamic.
+
+What is an API? | API stands for Application Programming Interface. It allows different software applications to communicate with each other.
+
+What is a chatbot? | A chatbot is a software application designed to communicate with users through text or voice and provide automated responses.
+
+What is data science? | Data science is a field that combines programming, statistics, mathematics, and domain knowledge to extract useful insights from data.

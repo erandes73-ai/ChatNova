@@ -1,0 +1,315 @@
+{% extends "base.html" %}
+
+{% block title %}
+ChatNova
+{% endblock %}
+
+{% block content %}
+
+<div class="chat-app">
+
+    <!-- ==========================================
+         SIDEBAR
+    =========================================== -->
+
+    <aside class="chat-sidebar" id="chatSidebar">
+
+        <!-- Sidebar Header -->
+
+        <div class="sidebar-header">
+
+            <div class="sidebar-brand">
+
+                <div class="sidebar-brand-icon">
+                    🤖
+                </div>
+
+                <div>
+                    <h2>ChatNova</h2>
+                    <span>AI Assistant</span>
+                </div>
+
+            </div>
+
+            <button
+                class="sidebar-close"
+                id="sidebarClose"
+                type="button"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- New Chat -->
+
+        <button
+            class="new-chat-button"
+            id="newChatButton"
+            type="button"
+        >
+            <span>＋</span>
+            <span>New Chat</span>
+        </button>
+
+
+        <!-- Conversations -->
+
+        <div class="conversation-section">
+
+            <div class="conversation-title">
+                Conversations
+            </div>
+
+            <div
+                class="conversation-list"
+                id="conversationList"
+            >
+
+                <!-- Conversations will be loaded by JavaScript -->
+
+                <div class="conversation-loading">
+                    Loading conversations...
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Sidebar Bottom -->
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-user">
+
+                <div class="sidebar-user-avatar">
+                    👤
+                </div>
+
+                <div class="sidebar-user-info">
+
+                    <strong>
+                        {{ current_user.username }}
+                    </strong>
+
+                    <small>
+                        ChatNova User
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="{{ url_for('logout') }}"
+                class="sidebar-logout"
+            >
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ==========================================
+         MAIN CHAT
+    =========================================== -->
+
+    <section class="chat-container">
+
+
+        <!-- ======================================
+             CHAT HEADER
+        ======================================= -->
+
+        <header class="chat-header">
+
+            <button
+                class="sidebar-toggle"
+                id="sidebarToggle"
+                type="button"
+            >
+                ☰
+            </button>
+
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🤖
+                </div>
+
+                <div class="brand-info">
+
+                    <h1>ChatNova</h1>
+
+                    <p>
+                        <span class="online-dot"></span>
+                        AI Assistant
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="user-area">
+
+                <span class="username">
+                    👋 {{ current_user.username }}
+                </span>
+
+            </div>
+
+        </header>
+
+
+        <!-- ======================================
+             CHAT BOX
+        ======================================= -->
+
+        <main
+            class="chat-box"
+            id="chatBox"
+        >
+
+            <!-- Welcome message -->
+
+            <div class="message-row bot-row">
+
+                <div class="message-avatar bot-avatar">
+                    🤖
+                </div>
+
+                <div class="message-content">
+
+                    <div class="message-sender">
+                        ChatNova
+                    </div>
+
+                    <div class="bot-message">
+
+                        Hello! 👋
+
+                        <br>
+
+                        I'm <strong>ChatNova</strong>,
+                        your intelligent conversation partner.
+
+                        <br>
+
+                        How can I help you today?
+
+                        <div class="message-time">
+                            Just now
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+
+        <!-- ======================================
+             TYPING INDICATOR
+        ======================================= -->
+
+        <div
+            class="typing-indicator"
+            id="typingIndicator"
+        >
+
+            <div class="message-avatar bot-avatar small-avatar">
+                🤖
+            </div>
+
+            <div class="typing-content">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <small>
+                    ChatNova is typing...
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- ======================================
+             INPUT
+        ======================================= -->
+
+        <div class="chat-input-area">
+
+            <div class="input-container">
+
+                <textarea
+                    id="messageInput"
+                    placeholder="Message ChatNova..."
+                    rows="1"
+                    autocomplete="off"
+                ></textarea>
+
+            </div>
+
+
+            <button
+                id="sendButton"
+                type="button"
+                aria-label="Send message"
+            >
+
+                <span class="send-icon">
+                    ➤
+                </span>
+
+            </button>
+
+        </div>
+
+
+        <!-- ======================================
+             FOOTER
+        ======================================= -->
+
+        <div class="chat-footer">
+
+            ChatNova can make mistakes.
+            Check important information.
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<!-- ==========================================
+     MOBILE OVERLAY
+=========================================== -->
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay"
+></div>
+
+
+<!-- ==========================================
+     JAVASCRIPT
+=========================================== -->
+
+<script
+    src="{{ url_for('static', filename='js/chatbot.js') }}"
+></script>
+
+{% endblock %}

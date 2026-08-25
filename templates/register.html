@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+
+{% block title %}
+Create Account - ChatNova
+{% endblock %}
+
+{% block content %}
+
+<div class="auth-page">
+
+    <!-- Background decoration -->
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+
+    <div class="auth-card">
+
+        <!-- Logo -->
+        <div class="auth-logo">
+            🤖
+        </div>
+
+
+        <!-- Heading -->
+        <h1>Join ChatNova</h1>
+
+        <p class="auth-subtitle">
+            Create your account and start chatting with your AI assistant.
+        </p>
+
+
+        <!-- Registration Form -->
+        <form
+            method="POST"
+            class="auth-form"
+        >
+
+            <!-- Username -->
+            <div class="form-group">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <div class="input-wrapper">
+
+                    <span class="input-icon">
+                        👤
+                    </span>
+
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Enter your username"
+                        autocomplete="username"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Email -->
+            <div class="form-group">
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <div class="input-wrapper">
+
+                    <span class="input-icon">
+                        ✉️
+                    </span>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Password -->
+            <div class="form-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <div class="input-wrapper">
+
+                    <span class="input-icon">
+                        🔒
+                    </span>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create a strong password"
+                        autocomplete="new-password"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Terms -->
+            <div class="terms">
+
+                <input
+                    type="checkbox"
+                    id="terms"
+                    required
+                >
+
+                <label for="terms">
+                    I agree to the
+                    <a href="#">
+                        Terms of Service
+                    </a>
+                    and
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+                </label>
+
+            </div>
+
+
+            <!-- Submit -->
+            <button
+                type="submit"
+                class="auth-button"
+            >
+
+                Create Account
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+        </form>
+
+
+        <!-- Login -->
+        <div class="auth-footer">
+
+            <span>
+                Already have an account?
+            </span>
+
+            <a href="{{ url_for('login') }}">
+                Sign in
+            </a>
+
+        </div>
+
+
+        <!-- Security -->
+        <div class="secure-note">
+
+            🔐 Your password is securely encrypted.
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

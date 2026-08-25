@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block title %}
+Login - ChatNova
+{% endblock %}
+
+{% block content %}
+
+<div class="auth-page">
+
+    <!-- Background decoration -->
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+
+    <div class="auth-card">
+
+        <!-- Logo -->
+        <div class="auth-logo">
+            🤖
+        </div>
+
+
+        <!-- Heading -->
+        <h1>Welcome Back</h1>
+
+        <p class="auth-subtitle">
+            Sign in to continue your conversation with ChatNova.
+        </p>
+
+
+        <!-- Login Form -->
+        <form
+            method="POST"
+            class="auth-form"
+        >
+
+            <!-- Username / Email -->
+            <div class="form-group">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <div class="input-wrapper">
+
+                    <span class="input-icon">
+                        👤
+                    </span>
+
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Enter your username"
+                        autocomplete="username"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Password -->
+            <div class="form-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <div class="input-wrapper">
+
+                    <span class="input-icon">
+                        🔒
+                    </span>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Remember / Forgot -->
+            <div class="login-options">
+
+                <label class="remember-me">
+
+                    <input
+                        type="checkbox"
+                        name="remember"
+                    >
+
+                    <span>
+                        Remember me
+                    </span>
+
+                </label>
+
+                <a href="#" class="forgot-password">
+                    Forgot password?
+                </a>
+
+            </div>
+
+
+            <!-- Login Button -->
+            <button
+                type="submit"
+                class="auth-button"
+            >
+
+                Sign In
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+        </form>
+
+
+        <!-- Register -->
+        <div class="auth-footer">
+
+            <span>
+                Don't have an account?
+            </span>
+
+            <a href="{{ url_for('register') }}">
+                Create account
+            </a>
+
+        </div>
+
+
+        <!-- Security -->
+        <div class="secure-note">
+
+            🔐 Your connection is secure.
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
